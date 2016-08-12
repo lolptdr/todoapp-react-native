@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { View, ScrollView, StyleSheet } from 'react-native'
 import Heading from './Heading'
 import Input from './Input'
+import Button from './Button'
 
-let todoIndex = 0
+const todoIndex = 0
 
 class App extends Component {
   constructor() {
@@ -42,6 +43,7 @@ class App extends Component {
           <Input
             inputValue={inputValue}
             _inputChange={ (text) => this._inputChange(text) } />
+          <Button _submitTodo={ () => this._submitTodo() } />
         </ScrollView>
       </View>
     )

@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     borderWidth: 1,
     borderColor: 'rgba(0,0,0,.1)',
-    justifyContext: 'center',
+    justifyContent: 'center',
     alignItems: 'center'
   },
   submit: {
