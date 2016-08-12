@@ -3,6 +3,8 @@ import { View, ScrollView, StyleSheet } from 'react-native'
 import Heading from './Heading'
 import Input from './Input'
 
+let todoIndex = 0
+
 class App extends Component {
   constructor() {
     super()
