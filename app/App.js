@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { View, ScrollView, StyleSheet } from 'react-native'
+
 import Heading from './Heading'
 import Input from './Input'
 import Button from './Button'
 import TodoList from './TodoList'
 
-const todoIndex = 0
+let todoIndex = 0
 
 class App extends Component {
   constructor() {
@@ -45,7 +46,7 @@ class App extends Component {
             inputValue={inputValue}
             _inputChange={ (text) => this._inputChange(text) } />
           <TodoList todo={todos} />
-          <Button _submitTodo={ () => this._submitTodo() } />
+          <Button _submitTodo={ this._submitTodo.bind(this) } />
         </ScrollView>
       </View>
     )
