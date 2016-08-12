@@ -18,6 +18,19 @@ class App extends Component {
     this.setState({ inputValue })
   }
 
+  _submitTodo () {
+    if (this.state.inputValue === '') return
+    let todo = {
+      title: this.state.inputValue,
+      todoIndex: todoIndex,
+      complete: false
+    }
+    todoIndex++
+    this.state.todos.push(todo)
+    this.setState({ todos: this.state.todos, inputValue: '' })
+    console.log('State: ', this.state)
+  }
+
   render() {
     const { inputValue } = this.state
     return (
